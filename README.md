@@ -1,4 +1,4 @@
-# muse-app
+# NBSeven Profile
 
 ## Project setup
 ```
