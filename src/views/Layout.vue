@@ -5,6 +5,20 @@
         <mu-icon value="menu"></mu-icon>
       </mu-button>
       {{titleName}}
+      <mu-menu open-on-hover slot="right">
+ <mu-button  flat >
+        <mu-icon  value="color_lens"></mu-icon>
+      </mu-button>
+  <mu-list slot="content">
+    <mu-list-item button @click="setTheme('Light')">
+      <mu-list-item-title>Light</mu-list-item-title>
+    </mu-list-item>
+    <mu-list-item button @click="setTheme('Dark')">
+      <mu-list-item-title>Dark</mu-list-item-title>
+    </mu-list-item>
+  </mu-list>
+</mu-menu>
+
       <mu-button icon slot="right" href="https://github.com/NBSeven">
         <mu-icon size="30" value=":iconfont icon-github"></mu-icon>
       </mu-button>
@@ -16,7 +30,7 @@
     </div>
 
     <!-- 菜单栏 -->
-    <mu-drawer :open.sync="open" :docked="docked" :z-depth="1">
+    <mu-drawer :open.sync="open" :docked="docked" :z-depth="1" :class="{'dark-theme': isBlack}">
       <mu-appbar :z-depth="0" color="#fff">
         <mu-flex justify-content="center">
           <mu-flex justify-content="start">
@@ -91,6 +105,15 @@ export default {
       deep: true
     }
   },
+  computed: {
+    isBlack () {
+      if (this.$store.state.theme === 'dark') {
+        return true
+      } else {
+        return false
+      }
+    }
+  },
   data: function () {
     return {
       Mobile: true,
@@ -139,11 +162,14 @@ export default {
         this.open = false
         this.docked = false
       }
+    },
+    setTheme (val) {
+      this.$store.commit('set' + val)
     }
   }
 }
 </script>
-<style>
+<style lang="scss">
 .demo-list-wrap {
   width: 256px;
   position: fixed;
@@ -151,6 +177,24 @@ export default {
   bottom: 0;
 }
 
+.dark-theme {
+  background-color: #424242 !important;
+  .mu-sub-header{
+    color: #fff !important;
+  }
+  .subtitle{
+    color: #fff !important;
+  }
+ .mu-appbar{
+    background-color: #424242 !important;
+ }
+  .mu-item{
+    color: #fff !important;
+  }
+  .mu-icon{
+    color: #fff !important;
+  }
+}
 .mu-appbar-header {
   position: fixed;
   right: 0;
