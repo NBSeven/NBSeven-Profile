@@ -135,12 +135,12 @@ export default {
         {
           path: 'projects',
           icon: 'keyboard',
-          title: '完成项目'
+          title: '项目介绍'
         },
         {
           path: 'blog',
           icon: 'book',
-          title: '我的笔记'
+          title: '分享笔记'
         }
       ]
     }

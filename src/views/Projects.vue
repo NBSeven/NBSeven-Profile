@@ -5,7 +5,7 @@
         <mu-slide-top-transition>
           <mu-card  v-show="show2">
             <mu-card-media :title="project.title" :sub-title="project.subtitle">
-              <img :src="project.imgUrl">
+              <img :src="project.imgUrl" height="300">
             </mu-card-media>
             <mu-card-title :title="project.company" sub-title="项目描述"></mu-card-title>
             <mu-card-text>
@@ -27,6 +27,46 @@ export default {
     return {
       show2: false,
       projects: [
+         {
+          title: '海康云眸连锁云重构2.0',
+          subtitle: '',
+          imgUrl: './img/hikvision.jpeg',
+          company: '杭州海康威视系统技术有限公司',
+          content: '海底捞，快客之类的连锁店使用的视频监控系统，我主要负责视频模块的开发',
+          lookUrl: ''
+        },
+        {
+          title: '海康云眸普教云',
+          subtitle: '',
+          imgUrl: './img/hikvision.jpeg',
+          company: '杭州海康威视系统技术有限公司',
+          content: '涉及到学校门禁，学生考勤等功能为一体的管理系统，我主要负责人员模块的开发',
+          lookUrl: ''
+        },
+        {
+          title: '海康hui组件开发',
+          subtitle: '基于element ui开发的组件库，供其它的开发者使用',
+          imgUrl: './img/hikvision.jpeg',
+          company: '杭州海康威视系统技术有限公司',
+          content: '目前我参与开发视频控件以及led屏幕设置组件（canvas）',
+          lookUrl: ''
+        },
+           {
+          title: 'IFMS智能数字工厂管理系统V2.0',
+          subtitle: '基于github VueAdmin开源模板制作的系统',
+          imgUrl: './img/project2.png',
+          company: '宁波舜宇智能科技有限公司',
+          content: '系统模块超过300个,我和一位后端一起完成前端的开发任务，还打包成windows应用,是一个比较庞大的项目',
+          lookUrl: ''
+        },
+        {
+          title: '工位平台V2.0',
+          subtitle: '基于element ui开发的协同系统',
+          imgUrl: './img/project3.png',
+          company: '宁波舜宇智能科技有限公司',
+          content: '与工厂管理系统一起搭配使用，模块大概在10个左右，总体难度不是很大，不过还基于cordova打包成了apk',
+          lookUrl: ''
+        },
         {
           title: '佰赢APP',
           subtitle: '基于Hbuilder开发的webapp',
@@ -51,22 +91,7 @@ export default {
           content: '工地考勤设备使用人脸识别，改系统搭配硬件使用，管理员工的考勤，独立完成前端工作',
           lookUrl: ''
         },
-        {
-          title: 'IFMS智能数字工厂管理系统V2.0',
-          subtitle: '基于github VueAdmin开源模板制作的系统',
-          imgUrl: './img/project2.png',
-          company: '宁波舜宇智能科技有限公司',
-          content: '系统模块超过300个,我和一位后端一起完成前端的开发任务，还打包成windows应用,是一个比较庞大的项目',
-          lookUrl: ''
-        },
-        {
-          title: '工位平台V2.0',
-          subtitle: '基于element ui开发的协同系统',
-          imgUrl: './img/project3.png',
-          company: '宁波舜宇智能科技有限公司',
-          content: '与工厂管理系统一起搭配使用，模块大概在10个左右，总体难度不是很大，不过还基于cordova打包成了apk',
-          lookUrl: ''
-        }
+     
       ]
     }
   },
