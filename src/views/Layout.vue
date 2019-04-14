@@ -80,7 +80,7 @@ export default {
   mounted: function () {
     this.$nextTick().then(() => {
       let disqus_config = function () {
-        this.page.url = 'http://localhost:8081' // Replace PAGE_URL with your page's canonical URL variable
+        this.page.url = process.env.NODE_ENV === 'production'? 'https://nbseven.github.io/NBSeven-Profile/':'http://localhost:8080' // Replace PAGE_URL with your page's canonical URL variable
         this.page.identifier = 'layout' // Replace PAGE_IDENTIFIER with your page's unique identifier variable
       };
       (function () { // DON'T EDIT BELOW THIS LINE
