@@ -2,7 +2,7 @@
 <template>
   <div>
     <h2>汪忠祥</h2>
-    <h3>前端工程师·杭州海康威视系统技术有限公司</h3>
+    <h3>前端工程师·杭州海康威视数字技术股份有限公司</h3>
     <hr />
     <mu-text-field v-model="school" label="毕业学校:" disabled></mu-text-field><br/>
     <mu-text-field v-model="major" label="专业:" disabled></mu-text-field><br/>
@@ -16,7 +16,7 @@
          <!-- <p>&emsp;毕业学校:浙江万里学院</p>
          <p>&emsp;专业:新媒体与信息网络</p> -->
       </div>
-     
+
     </text-card>
     <text-card :title="card2.title">
       <ol slot="content">
@@ -43,12 +43,12 @@ import TextCard from './../components/TextCard'
 export default {
   data () {
     return {
-      school:'浙江万里学院',
-      major:'新媒体与信息网络',
-      phone:'15267863184',
-      job1:'杭州海康威视 2018.12-至今',
-      job2:'宁波舜宇智能科技 2018.1-2018.12',
-      job3:'浙江满益网络科技 2017.5-2018.12',
+      school: '浙江万里学院',
+      major: '新媒体与信息网络',
+      phone: '15267863184',
+      job1: '杭州海康威视 2018.12-至今',
+      job2: '宁波舜宇智能科技 2018.1-2018.12',
+      job3: '浙江满益网络科技 2017.5-2018.12',
       card1: {
         title: '个人简述',
         content: '我是一名90后的野生前端，喜欢折腾，大二开始接触编程，那时候刚好有门专业课是网页的制作与设计，断断续续地学习到了一些前端的相关知识。在自学了一段时间以后才开始我的前端工作之旅，目前项目使用的技术栈基本上是vue全家桶，用过node写过简单的后台（express），也会微信小程序应用开发。'
