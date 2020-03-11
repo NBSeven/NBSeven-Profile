@@ -43,11 +43,11 @@ export default {
   h2{
     margin-bottom: 5px;
   }
-  p {
+  /* p {
     color: #a3a3a3;
   }
   li{
     color: #a3a3a3;
-  }
+  } */
 }
 </style>

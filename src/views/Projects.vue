@@ -11,9 +11,6 @@
             <mu-card-text>
               {{project.content}}
             </mu-card-text>
-            <!-- <mu-card-actions>
-              <mu-button flat :href="project.lookUrl" v-if="project.lookUrl">查看链接</mu-button>
-            </mu-card-actions> -->
             </mu-card>
         </mu-slide-top-transition>
       </mu-col>
@@ -91,7 +88,7 @@ export default {
           content: '工地考勤设备使用人脸识别，改系统搭配硬件使用，管理员工的考勤，独立完成前端工作',
           lookUrl: ''
         },
-     
+
       ]
     }
   },

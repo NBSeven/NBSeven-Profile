@@ -19,16 +19,19 @@ export default new Router({
         {
           path: 'personal',
           name: 'Personal',
+          cname: '关于我',
           component: Personal
         },
         {
           path: 'home',
           name: 'Home',
+          cname: '首页',
           component: Home
         },
         {
           path: 'projects',
           name: 'Projects',
+          cname: '项目',
           component: Projects
         },
         {
